@@ -1,0 +1,30 @@
+{
+  "name": "alexs/framework-php",
+  "require": {
+    "php-di/php-di": "6.0",
+    "nikic/fast-route": "1.3"
+  },
+  "require-dev": {
+    "doctrine/orm": "2.6",
+    "robmorgan/phinx": "0.10.6",
+    "aura/session": "2.1",
+    "jasongrimes/paginator": "1.0",
+    "kint-php/kint": "3.1",
+    "symfony/validator": "4.2",
+    "respect/validation": "1.1"
+  },
+  "authors": [
+    {
+      "name": "naymco",
+      "email": "naymco2013@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Application\\": "App/"
+    },
+    "files": [
+      "App/helpers.php"
+    ]
+  }
+}
