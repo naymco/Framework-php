@@ -2661,7 +2661,7 @@ class UnitOfWork implements PropertyChangedListener
                         $class->reflFields[$field]->setValue($entity, $data[$field]);
                         $this->originalEntityData[$oid][$field] = $data[$field];
 
-                        continue;
+                        continue 2;
                     }
 
                     $associatedId = [];
@@ -2690,7 +2690,7 @@ class UnitOfWork implements PropertyChangedListener
                         $class->reflFields[$field]->setValue($entity, null);
                         $this->originalEntityData[$oid][$field] = null;
 
-                        continue;
+                        continue 2;
                     }
 
                     if ( ! isset($hints['fetchMode'][$class->name][$field])) {

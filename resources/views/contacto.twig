@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+
+{% endblock %}
+{% block content %}
+    <h1> Contacto</h1>
+    <li> {{ name }} </li>
+    <li> {{ email }} </li>
+    <li> {{ fecha }}</li>
+
+
+    <form method="post" action="/contacto2">
+        Escribe el nombre para modificar:
+        <input type="text" name="nombre">
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}

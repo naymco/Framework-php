@@ -14,12 +14,10 @@ Kint::dump($containerBuilder);
 //Ponemos la variable Autowiring a False:
 $containerBuilder->useAutowiring(false);
 
-//Añadimos al contenedor las definiciones de configuración que tendremos en //config.php:
-$containerBuilder->addDefinitions(__DIR__ . '/../bootstrap/config.php');
+$containerBuilder->addDefinitions(base_path('bootstrap/config.php'));
+$containerBuilder->useAutowiring(true);
 
 //Ahora creamos la instancia de la clase containerBuilder:
 $container = $containerBuilder->build();
     return $container;
 
-$containerBuilder->addDefinitions(base_path('bootstrap/config.php'));
-$containerBuilder->useAutowiring(true);
