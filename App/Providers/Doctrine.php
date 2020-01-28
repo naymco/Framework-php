@@ -4,7 +4,6 @@ namespace Application\Providers;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\ORMException;
 use Doctrine\ORM\Tools\Setup;
 use Psr\Container\ContainerInterface;
 
@@ -18,7 +17,6 @@ class Doctrine
     {
         //variable para guardar la conexión a la base de datos con la función de config.php
         $dbconfig = $container->get('config.database');
-        \Kint::dump($dbconfig);
 
         //Definimos en una variable la ruta a los modelos de datos:
         $paths = [

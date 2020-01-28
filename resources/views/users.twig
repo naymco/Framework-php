@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block title %}
@@ -9,14 +8,11 @@
     {% block content %}
         <h1> Listado de usuarios </h1>
 
-    {% for user in users %}
-
-         <li>  {{ user }} </li>
-
-
-    {% else %}
-        No users have been found.
-    {% endfor %}
-{% endblock %}
+        {% for user in users %}
+            <li>  {{ user.__get("name") | e }} </li>
+        {% else %}
+            No users have been found.
+        {% endfor %}
+    {% endblock %}
 
 {% endblock %}

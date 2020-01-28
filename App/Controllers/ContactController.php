@@ -5,8 +5,6 @@ namespace Application\Controllers;
 use Application\Providers\Doctrine;
 use Application\Models\Entities\User;
 use Application\Providers\View;
-use Doctrine\ORM\OptimisticLockException;
-use Doctrine\ORM\ORMException;
 
 class ContactController
 {

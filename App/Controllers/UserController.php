@@ -23,16 +23,12 @@ class UserController
 
         $users = $this->doctrine->em->getRepository(User::class)->findAll();
 
-
-        $usersOb = array('names' => $users[is_array('users')]->name);
-
-
-        echo $view->render('users.twig', array('users' => $usersOb));
+        echo $view->render('users.twig', ['users'=>$users]);
 
 
-        echo "<pre>";
-        var_dump($usersOb);
-        echo "</pre>";
+//        echo "<pre>";
+//        var_dump($users);
+//        echo "</pre>";
 
         \Kint::dump($users);
 

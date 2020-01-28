@@ -30,5 +30,8 @@
     "files": [
       "App/helpers.php"
     ]
+  },
+  "scripts": {
+    "start": "php -S localhost:5000 -t=public"
   }
 }

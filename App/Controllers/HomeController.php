@@ -3,7 +3,6 @@
 namespace Application\Controllers;
 
 use Application\Providers\Doctrine;
-use Application\Models\Entities\User;
 use Application\Providers\View;
 
 class HomeController

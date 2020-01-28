@@ -9,7 +9,7 @@ class View
     public function __construct()
     {
         $loader = new \Twig\Loader\FilesystemLoader(base_path('resources/views'));
-        \Kint::dump($loader);
+
         $twig = new \Twig\Environment($loader);
 
         $twigFunctions = new \Twig\TwigFunction(\TwigFunctions::class,
